@@ -1,0 +1,51 @@
+<div>
+    <form [formGroup]="customerDetailsForm" >
+        Value: {{customerDetailsForm.value | json}}
+    
+        <br>
+        <mat-form-field class="form-row">
+            <mat-label>User ID (Read-Only)</mat-label>
+            <input matInput readonly formControlName="userID">
+        </mat-form-field>
+      
+        <br>
+        <mat-form-field class="form-row">
+            <mat-label>First Name</mat-label>
+            <input matInput readonly formControlName="firstName" required>
+        </mat-form-field>
+    
+        <br>
+        <mat-form-field class="form-row">
+            <mat-label>Last Name</mat-label>
+            <input matInput readonly formControlName="lastName" required>
+        </mat-form-field>
+        
+        <br>
+        <mat-form-field class="form-row">
+            <mat-label>Email</mat-label>
+            <input matInput readonly formControlName="email" required>
+            <!-- <mat-error *ngIf="email.invalid && email.touched"> Email doesn't look correct</mat-error> -->
+        </mat-form-field>
+    
+        <br>
+        <mat-form-field class="form-row">
+            <mat-label>Phone Number</mat-label>
+            <input matInput readonly formControlName="phoneNo" required>
+        </mat-form-field>
+    
+        <br>
+        <mat-form-field class="form-row">
+            <mat-label>Address</mat-label>
+            <input matInput readonly formControlName="address" required>
+        </mat-form-field>
+    
+        <br>
+        <mat-form-field class="form-row">
+            <mat-label>Type</mat-label>
+            <input matInput readonly formControlName="type" required>
+        </mat-form-field>
+    
+    </form>
+</div>
+
+  

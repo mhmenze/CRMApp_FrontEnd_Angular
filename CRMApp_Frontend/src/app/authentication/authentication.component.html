@@ -1,0 +1,38 @@
+<div>
+    <form [formGroup]="loginForm">
+        Value: {{loginForm.value | json}}
+
+        <!-- <hr>
+        <mat-form-field>
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Enter your username" formControlName="username" required>
+            <mat-error *ngIf="username.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field> -->
+        
+        <br>
+        <mat-form-field class="login-row">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Enter your email" formControlName="email" required>
+            <mat-error *ngIf="email.invalid && email.touched"> Email doesn't look correct</mat-error>
+        </mat-form-field>
+
+        <!-- <hr>
+        <mat-form-field>
+            <mat-label>Email or Username</mat-label>
+            <input matInput placeholder="Enter your email or username" formControlName="emailorusername" required>
+            <mat-error *ngIf="emailorusername.invalid && emailorusername.touched"> Email doesn't look correct</mat-error>
+        </mat-form-field>  -->
+
+        <br><br><br>
+        <mat-form-field class="login-row">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Enter your password" formControlName="password">
+            <!-- <mat-hint align="end">Min 8 characters including number, letter, and special character</mat-hint> -->
+            <!-- <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon> -->
+            <mat-error *ngIf="password.invalid && password.touched">Min 8 characters including number, letter, and special character</mat-error>
+        </mat-form-field>
+
+        <br><br><br><br><br>
+        <button mat-raised-button [disabled]="loginForm.invalid" color="primary"> Submit </button>
+    </form>
+</div>

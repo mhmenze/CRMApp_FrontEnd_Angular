@@ -1,0 +1,16 @@
+.add-button{
+    text-align: center;
+}
+
+.customer-actions-buttons{
+    text-align: center;
+}
+
+.mat-column-actions, 
+.mat-column-position, 
+.mat-column-name, 
+.mat-column-company, 
+.mat-column-email, 
+.mat-column-phone {
+    text-align: center;
+}
